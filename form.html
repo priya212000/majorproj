@@ -1,0 +1,36 @@
+
+<html>
+    <style>
+       
+        p
+        {
+            
+                color: 
+                #6b6363;
+              
+        }
+
+
+        
+    </style>
+    <head>
+        <title>{{ title }} Sentiment Analysis</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <h1>Sentiment Analysis</h1>
+        <form method="POST">
+            <textarea name="text1" placeholder="Type" rows="10" cols="109"></textarea><br><br>
+
+            <input class="a1" type="submit">
+        </form>
+        {% if final %}
+        <div>
+            <p>The Sentiment of '{{ text1 }}' is {{ final }}% positive.!</p>
+            {% else %}
+            <p></p>
+            {% endif %}
+        </div>
+        
+    </body>
+</html>
